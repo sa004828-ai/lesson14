@@ -4,7 +4,10 @@ jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "first Actions Trial"
-      - run: chmod +x hello.sh
-      - run: chmod + world-test.sh
-      - run: ./world-test.sh
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Permission
+        run: chmod +x hello.sh
+        run: chmod + world-test.sh
+      - name: Test Run
+        run: ./world-test.sh
